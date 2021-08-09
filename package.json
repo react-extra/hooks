@@ -1,0 +1,70 @@
+{
+  "name": "@react-extra/hooks",
+  "version": "1.0.0",
+  "description": "Useful react custom hooks",
+  "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-extra/hooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks"
+  ],
+  "author": "React Extra",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "build/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/react-extra/hooks/issues"
+  },
+  "homepage": "https://github.com/react-extra/hooks#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.9",
+    "@babel/preset-react": "^7.14.5",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/react-hooks": "^7.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "lint-staged": "^11.1.1",
+    "prettier": "^2.3.2",
+    "react": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.55.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "semantic-release": "^17.4.4"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "test": "jest src",
+    "test:watch": "npm run test -- --watch",
+    "test:cover": "npm run test -- --collect-coverage",
+    "build": "rimraf build && rollup -c",
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
+    "lint:fix": "npm run lint -- --fix"
+  }
+}
