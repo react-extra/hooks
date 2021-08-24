@@ -1,5 +1,5 @@
 //---
-// hook importred from Kent c dodds's bookshelf repository
+// hook imported from Kent c dodds's bookshelf repository
 // https://github.com/kentcdodds/bookshelf
 //--
 
