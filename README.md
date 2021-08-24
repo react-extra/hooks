@@ -19,6 +19,7 @@ npm i @react-extra/hooks
 
 ## Hooks
 - [useLocalStorageState](#uselocalstoragestate)
+- [useSafeDispatch](#usesafedispatch)
 
 ### useLocalStorageState
 
@@ -35,6 +36,33 @@ function Counter() {
 }
 ```
 
+### useSafeDispatch
+
+> This hook prevent the call of the function on an unmounted component.
+
+**Example**
+```javascript
+import { useSafeDispatch } from "@react-extra/hooks"
+
+function App() {
+  const [isLoading, setIsLoading] = useState(false)
+  const safeSetIsLoading = useSafeDispatch(setIsLoading)
+
+  useEffect(()=> {
+    safeSetIsLoading(true)
+    asyncFunction().finally(()=> safeSetIsLoading(false) )
+  },[safeSetIsLoading])
+  
+  return <div>{String(isLoading)}</div>
+}
+```
+
+In the example above if the **App** is unmounted before **asyncFunction** is finished its execution the **safeSetIsLoading** will not call the **setIsLoading** witch allows to avoid the error of:
+ ```diff
+- Warning: Can't perform a React state update on an unmounted component. 
+- This is a no-op, but it indicates a memory leak in your application.
+- To fix, cancel all subscriptions and asynchronous tasks in a useEffect cleanup function`.
+```
 
 <!-- links -->
 [build]: https://github.com/react-extra/hooks/actions/workflows/cd.yml
