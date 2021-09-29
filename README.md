@@ -19,7 +19,8 @@ npm i @react-extra/hooks
 ## Hooks
 
 - [useLocalStorageState](#uselocalstoragestate)
-- [useAsync](#useAsync)
+- [useSessionStorageState](#usesessionstoragestate)
+- [useAsync](#useasync)
 - [useSafeDispatch](#usesafedispatch)
 
 ### useLocalStorageState
@@ -31,14 +32,35 @@ npm i @react-extra/hooks
 ```javascript
 import { useLocalStorageState } from '@react-extra/hooks'
 
-function Counter() {
-  const [number, setNumber] = useLocalStorageState('number', 1)
-
-  return <div>{number}</div>
+function App() {
+  const [state, setState] = useLocalStorageState(key, initialValue)
+  ...
 }
 ```
+#### Parameters:
+- `key`: localStorage key
+- `initialValue`: the initial state to synchronize with the localStorage if the key doesn't exist there
 
-### UseAsync
+### useSessionStorageState
+
+> This hook synchronize state with sessionStorage.
+
+**Example**
+
+```javascript
+import { useSessionStorageState } from '@react-extra/hooks'
+
+function App() {
+  const [state, setState] = useSessionStorageState(key, intialValue)
+  ...
+}
+```
+#### Parameters:
+- `key`: sessionStorage key
+- `initialValue`: the initial state to synchronize with the sessionStorage if the key doesn't exist there
+
+
+### useAsync
 
 ```javascript
 const {
