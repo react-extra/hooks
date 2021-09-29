@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/react-extra/hooks/compare/v1.1.0...v1.2.0) (2021-09-29)
+
+
+### Features
+
+* add use-session-storage-state ([299cdd6](https://github.com/react-extra/hooks/commit/299cdd6c5b50a861c50447ead2d38a749bdb65f4))
+
 # [1.1.0](https://github.com/react-extra/hooks/compare/v1.0.0...v1.1.0) (2021-09-01)
 
 
