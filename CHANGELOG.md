@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/react-extra/hooks/compare/v1.2.0...v1.2.1) (2021-09-29)
+
+
+### Bug Fixes
+
+* use-session-storage-state export ([067e781](https://github.com/react-extra/hooks/commit/067e781a368ff0c17c73a5861c27c2ed0245423a))
+
 # [1.2.0](https://github.com/react-extra/hooks/compare/v1.1.0...v1.2.0) (2021-09-29)
 
 
